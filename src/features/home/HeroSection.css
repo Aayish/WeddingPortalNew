@@ -1,0 +1,412 @@
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Ensure Hero Text and Cards are Stacked Vertically */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Add spacing between text and cards */
+}
+
+/* Hero Background */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(255, 223, 186, 0.3) 0%, 
+    rgba(232, 193, 217, 0.4) 50%, 
+    rgba(200, 170, 140, 0.3) 100%
+  ),
+  url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="leaves" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="30" fill="%23FFD89C" opacity="0.1"/><circle cx="150" cy="100" r="25" fill="%23E8B4C8" opacity="0.1"/><circle cx="100" cy="150" r="35" fill="%23B49678" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23leaves)"/></svg>');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 2rem;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-text {
+  margin-bottom: 3rem;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title-accent {
+  background: linear-gradient(135deg, #FFD89C 0%, #E8B4C8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Hero Actions */
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1.2s ease-out 0.3s both;
+}
+
+/* Scroll Indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+
+/* Hero Section with Cards */
+.hero-section {
+  padding: 50px 20px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.hero-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-card-icon {
+  font-size: 40px;
+  background: #ff9bb3; /* Light pink for card icons */
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+}
+
+.hero-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.hero-card-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 10px;
+}
+
+.hero-card-description {
+  font-size: 0.875rem;
+  color: #718096;
+  line-height: 1.4;
+}
+
+/* Hero Background Section */
+.hero-background-section {
+  background: linear-gradient(135deg, #E8B4C8 0%, #D4A4B8 50%, #C294A8 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 6rem 0; /* Match Final CTA section padding */
+}
+
+.hero-background-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="hearts" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M50,25 C50,15 40,10 30,15 C20,10 10,15 10,25 C10,35 30,50 30,50 C30,50 50,35 50,25 Z" fill="%23FFFFFF" opacity="0.05"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hearts)"/></svg>');
+  pointer-events: none;
+}
+
+.hero-background-overlay {
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+/* Center Align Hero Text Content */
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Restore Hero Text Section Styling */
+.hero-text-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px; /* Add padding for better spacing */
+}
+
+/* Remove Debugging Background Colors */
+.hero-section {
+  background: none;
+}
+
+.hero-background-section {
+  background: linear-gradient(135deg, #E8B4C8 0%, #D4A4B8 50%, #C294A8 100%);
+}
+
+.hero-text-content {
+  background: none;
+}
+
+/* Update Font Color for Hero Text */
+.hero-main-heading {
+  color: black; /* Change font color to black for readability */
+  font-family: 'Playfair Display', serif; /* Royal and elegant font */
+  font-size: 3rem; /* Adjust font size to fit in one line */
+  font-weight: 700; /* Bold for prominence */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.hero-subheading {
+  color: black; /* Change font color to black for readability */
+  font-family: 'Playfair Display', serif; /* Royal and elegant font */
+  font-size: 1.5rem; /* Increase font size */
+  font-weight: 500; /* Medium weight for readability */
+}
+
+/* Updated Hero Section Colors and Fonts */
+.hero-section {
+  font-family: 'Playfair Display', serif;
+  color: #2d3748;
+}
+
+.hero-background {
+  background: linear-gradient(135deg, 
+    rgba(255, 223, 186, 0.3) 0%, 
+    rgba(232, 193, 217, 0.4) 50%, 
+    rgba(200, 170, 140, 0.3) 100%
+  );
+}
+
+.hero-main-heading {
+  font-size: 3rem;
+  color: #4a5568;
+}
+
+.hero-highlight {
+  color: #ff6b35;
+}
+
+.hero-subheading {
+  font-size: 1.25rem;
+  color: #718096;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 500px;
+    padding-top: 70px;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hero-actions .cta-button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero-cards-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 450px;
+    padding-top: 60px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .hero-text {
+    margin-bottom: 2rem;
+  }
+}
+
+/* High DPI screens */
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  .hero-description {
+    font-size: 1.375rem;
+  }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    height: auto;
+    min-height: 400px;
+    padding: 100px 0 50px;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+}
+
+/* Ensure Hero Section Starts Immediately Below Navigation */
+.hero-section {
+  margin-top: 0 !important; /* Force removal of top margin */
+  padding-top: 0 !important; /* Force removal of top padding */
+}
+
+/* Remove Top and Bottom Gap from Hero Container */
+.hero-section {
+  margin: 0 !important; /* Remove all margins */
+  padding: 0 !important; /* Remove all padding */
+}

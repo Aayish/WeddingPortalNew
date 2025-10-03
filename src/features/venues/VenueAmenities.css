@@ -1,0 +1,12 @@
+/* Venue Amenities Section */
+.venue-amenities-section {
+  padding: 4rem 0;
+  background: #FFFFFF;
+}
+
+.venue-amenities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}

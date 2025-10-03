@@ -1,0 +1,13 @@
+/* Venue Booking Section */
+.venue-booking-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #E8B4C8 0%, #D4A4B8 100%);
+}
+
+.venue-booking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  color: white;
+}

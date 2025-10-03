@@ -1,0 +1,78 @@
+/* Site Footer Styles */
+.site-footer {
+  background: #f8f9fa;
+  padding: 60px 0;
+  border-top: 1px solid #e8e8e8;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer-separator {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ff6b9d;
+}
+
+/* Mobile Footer */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .footer-separator {
+    display: none;
+  }
+}

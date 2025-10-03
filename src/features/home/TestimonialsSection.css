@@ -1,0 +1,134 @@
+/* Testimonials Section Styles */
+.testimonials-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+  position: relative;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Testimonials Header */
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.testimonials-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #2D2D2D;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.testimonials-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #6A6A6A;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 4rem 0;
+  }
+
+  .testimonials-container {
+    padding: 0 1rem;
+  }
+
+  .testimonials-header {
+    margin-bottom: 3rem;
+  }
+
+  .testimonials-title {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .testimonials-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 3rem 0;
+  }
+
+  .testimonials-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .testimonials-title {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .testimonials-description {
+    font-size: 0.95rem;
+  }
+
+  .testimonials-grid {
+    gap: 1.25rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .testimonials-section {
+    padding: 8rem 0;
+  }
+
+  .testimonials-title {
+    font-size: 3.5rem;
+  }
+
+  .testimonials-description {
+    font-size: 1.25rem;
+  }
+
+  .testimonials-grid {
+    gap: 3rem;
+  }
+}

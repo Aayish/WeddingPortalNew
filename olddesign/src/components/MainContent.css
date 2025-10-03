@@ -1,0 +1,65 @@
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding-top: var(--header-height);
+  min-height: 100vh;
+}
+
+.content-section {
+  padding: var(--spacing-xxl) 0;
+}
+
+.content-placeholder {
+  text-align: center;
+  padding: var(--spacing-xxl);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.content-placeholder h2 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+}
+
+.content-placeholder p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .content-placeholder {
+    padding: var(--spacing-lg);
+  }
+  
+  .content-placeholder h2 {
+    font-size: 2rem;
+  }
+  
+  .content-placeholder p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-section {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+  
+  .content-placeholder {
+    padding: var(--spacing-md);
+  }
+  
+  .content-placeholder h2 {
+    font-size: 1.75rem;
+  }
+}
