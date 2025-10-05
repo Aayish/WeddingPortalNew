@@ -1,4 +1,5 @@
-import { mockVenues, type Venue } from './venueData'
+import React, { useState, useEffect } from 'react'
+import type { Venue } from './venueData'
 import './VenueInfoSection.css'
 
 interface VenueInfoSectionProps {
@@ -6,10 +7,29 @@ interface VenueInfoSectionProps {
 }
 
 const VenueInfoSection: React.FC<VenueInfoSectionProps> = ({ venueId }) => {
-  const venue: Venue | undefined = mockVenues[venueId]
+  const [venue, setVenue] = useState<Venue | undefined>(undefined)
+  const [isLoading, setIsLoading] = useState(true)
 
-  if (!venue) {
-    return null
+  useEffect(() => {
+    setIsLoading(true)
+    import('./venueData').then(({ fetchFeaturedVenues }) => {
+      fetchFeaturedVenues().then((venues) => {
+        const found = venues.find(v => v.id === venueId)
+        setVenue(found)
+        setIsLoading(false)
+      })
+    })
+  }, [venueId])
+
+  if (isLoading || !venue) {
+    return (
+      <section className="venue-info-section loading">
+        <div className="venue-info-loading">
+          <div className="loading-spinner"></div>
+          <p>Loading venue details...</p>
+        </div>
+      </section>
+    )
   }
 
   return (
@@ -25,7 +45,7 @@ const VenueInfoSection: React.FC<VenueInfoSectionProps> = ({ venueId }) => {
             <div className="venue-features">
               <h3 className="features-title">Venue Features</h3>
               <div className="features-grid">
-                {venue.features.map((feature, index) => (
+                {venue.features.map((feature: string, index: number) => (
                   <div key={index} className="feature-item">
                     <span className="feature-icon">✨</span>
                     <span className="feature-text">{feature}</span>
