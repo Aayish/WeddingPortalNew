@@ -1,0 +1,233 @@
+/* ...existing code... */
+
+@media (min-width: 1400px) {
+	.caterer-search-bar--redesigned {
+		max-width: 1300px;
+	}
+}
+/* Redesigned Search Bar Styles for Caterer Landing */
+.caterer-search-bar--redesigned {
+			border: 2px solid #ff6b9d;
+	border-radius: 50px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+	background: white;
+		max-width: 1100px;
+		width: 100%;
+		margin: 0 auto;
+	/* padding: 0.5rem 2rem; */
+}
+
+.caterer-search-bar__fields--redesigned {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 0;
+	position: relative;
+}
+
+.caterer-search-bar__input--redesigned {
+						background: none;
+						border: none !important;
+						box-shadow: none;
+		padding: 22px 30px;
+		font-size: 16px;
+		outline: none;
+		color: #333;
+		font-weight: 400;
+		flex: 2;
+		min-width: 250px;
+}
+
+.caterer-search-bar__divider {
+	width: 1px;
+	height: 35px;
+	background: #e8e8e8;
+	flex-shrink: 0;
+	margin: 0 10px;
+}
+
+.custom-dropdown-redesigned {
+	position: relative;
+	min-width: 160px;
+	flex-shrink: 0;
+}
+
+.dropdown-trigger-redesigned {
+	background: transparent;
+	border: none;
+	padding: 22px 25px;
+	font-size: 16px;
+	color: #777;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	transition: all 0.3s ease;
+	position: relative;
+	font-weight: 400;
+}
+
+.dropdown-trigger-redesigned:hover {
+	color: #ff6b9d;
+}
+
+.dropdown-trigger-redesigned.active {
+	color: #ff6b9d;
+}
+
+.dropdown-arrow-redesigned {
+	font-size: 12px;
+	color: #bbb;
+	margin-left: 8px;
+	transition: transform 0.3s ease;
+}
+
+.dropdown-trigger-redesigned.active .dropdown-arrow-redesigned {
+	transform: rotate(180deg);
+	color: #ff6b9d;
+}
+
+.dropdown-menu-redesigned {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background: white;
+	border: 1px solid #e1e5e9;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+	z-index: 1000;
+	margin-top: 8px;
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.dropdown-item-redesigned {
+	padding: 15px 25px;
+	font-size: 15px;
+	color: #555;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.dropdown-item-redesigned:last-child {
+	border-bottom: none;
+}
+
+.dropdown-item-redesigned:hover {
+	background: #f8f9fa;
+	color: #ff6b9d;
+}
+
+.caterer-search-bar__search-btn--redesigned {
+	background: linear-gradient(135deg, #ff6b9d, #c44569);
+	color: white;
+	border: none;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+	flex-shrink: 0;
+	margin: 10px;
+	font-size: 1.3rem;
+}
+
+.caterer-search-bar__search-btn--redesigned:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+}
+
+.caterer-search-bar {
+	background: white;
+	/* padding: 0.5rem 1.5rem; */
+	border-radius: 999px;
+	box-shadow: 0 4px 24px rgba(233, 30, 99, 0.12);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.caterer-search-bar__fields {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	gap: 0.5rem;
+}
+
+.caterer-search-bar__input,
+.caterer-search-bar__select {
+	border: none;
+	/* background: #f8f9fa; */
+	padding: 0.9rem 1.2rem;
+	font-size: 1rem;
+	outline: none;
+	border-radius: 999px;
+	flex: 1;
+	min-width: 160px;
+	/* box-shadow: 0 2px 8px rgba(233, 30, 99, 0.08); */
+	color: #444;
+	border: 1px solid #eee;
+	appearance: none;
+	transition: border 0.2s, box-shadow 0.2s;
+}
+
+.caterer-search-bar__input::placeholder {
+	color: #bbb;
+}
+
+.caterer-search-bar__search-btn {
+	background: #e91e63;
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: background 0.3s;
+	margin-left: 0.5rem;
+}
+.caterer-search-bar__search-btn:hover {
+	background: #d81b60;
+}
+
+.caterer-search-bar__advanced-toggle {
+	background: none;
+	color: #e91e63;
+	border: none;
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.caterer-search-bar__advanced {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	margin-top: 0.5rem;
+	justify-content: center;
+}
+
+.caterer-search-bar__checkbox-label {
+	font-size: 0.95rem;
+	color: #444;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}

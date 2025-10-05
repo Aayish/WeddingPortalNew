@@ -1,0 +1,264 @@
+.caterercard {
+  	width: 100%;
+  	position: relative;
+  	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  	border-radius: 16px;
+  	background-color: #fff;
+  	border: 1px solid #f3f4f6;
+  	box-sizing: border-box;
+  	height: 434px;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 1px;
+  	text-align: left;
+  	font-size: 12px;
+  	color: #fff;
+  	font-family: Inter;
+}
+.container {
+  	align-self: stretch;
+  	position: relative;
+  	height: 192px;
+}
+.imagewithfallback-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 347.3px;
+  	height: 192px;
+  	object-fit: cover;
+}
+.badge {
+  	position: absolute;
+  	top: 12px;
+  	left: 12px;
+  	border-radius: 8px;
+  	background-color: #ff6900;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	width: 93.1px;
+  	height: 22px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 2px 8px;
+}
+.sponsored {
+  	position: relative;
+  	line-height: 16px;
+  	font-weight: 500;
+}
+.caterercard-container {
+  	position: absolute;
+  	top: 12px;
+  	left: 277.88px;
+  	border-radius: 10px;
+  	background-color: rgba(255, 255, 255, 0.9);
+  	width: 57.5px;
+  	height: 28px;
+  	display: flex;
+  	align-items: center;
+  	padding: 0px 8px;
+  	box-sizing: border-box;
+  	gap: 4px;
+  	font-size: 14px;
+  	color: #0a0a0a;
+}
+.icon {
+  	width: 16px;
+  	position: relative;
+  	height: 16px;
+}
+.text {
+  	flex: 1;
+  	position: relative;
+  	height: 20px;
+}
+.div {
+  	position: absolute;
+  	top: 0.5px;
+  	left: 0px;
+  	letter-spacing: -0.15px;
+  	line-height: 20px;
+  	font-weight: 500;
+}
+.container2 {
+  	align-self: stretch;
+  	position: relative;
+  	height: 240px;
+  	font-size: 14px;
+  	color: #4a5565;
+}
+.heading-3 {
+  	position: absolute;
+  	top: 16px;
+  	left: 16px;
+  	width: 315.3px;
+  	height: 28px;
+  	font-size: 18px;
+  	color: #101828;
+}
+.royal-feast-catering {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	letter-spacing: -0.44px;
+  	line-height: 28px;
+  	font-weight: 500;
+}
+.container3 {
+  	position: absolute;
+  	top: 48px;
+  	left: 16px;
+  	width: 315.3px;
+  	height: 20px;
+}
+.caterercard-icon {
+  	position: absolute;
+  	top: 2px;
+  	left: 0px;
+  	width: 16px;
+  	height: 16px;
+}
+.karachi-sindh {
+  	position: absolute;
+  	top: 0.5px;
+  	left: 20px;
+  	letter-spacing: -0.15px;
+  	line-height: 20px;
+}
+.container4 {
+  	position: absolute;
+  	top: 76px;
+  	left: 16px;
+  	width: 315.3px;
+  	height: 20px;
+}
+.container5 {
+  	position: absolute;
+  	top: 108px;
+  	left: 16px;
+  	width: 315.3px;
+  	height: 48px;
+  	font-size: 12px;
+  	color: #030213;
+}
+.caterercard-badge {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	border-radius: 8px;
+  	background-color: #eceef2;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	width: 118.5px;
+  	height: 22px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 2px 8px;
+}
+.badge2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 122.45px;
+  	border-radius: 8px;
+  	background-color: #eceef2;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	width: 110.4px;
+  	height: 22px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 2px 8px;
+}
+.badge3 {
+  	position: absolute;
+  	top: 26px;
+  	left: 0px;
+  	border-radius: 8px;
+  	background-color: #eceef2;
+  	border: 1px solid rgba(0, 0, 0, 0);
+  	box-sizing: border-box;
+  	width: 92.3px;
+  	height: 22px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 2px 8px;
+}
+.container6 {
+  	position: absolute;
+  	top: 172px;
+  	left: 16px;
+  	width: 315.3px;
+  	height: 52px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 0px;
+}
+.container7 {
+  	width: 89.3px;
+  	position: relative;
+  	height: 52px;
+}
+.caterercard-text {
+  	position: absolute;
+  	top: 4.5px;
+  	left: 0px;
+  	width: 85.1px;
+  	height: 16.5px;
+  	display: flex;
+  	align-items: flex-start;
+}
+.starting-from {
+  	position: relative;
+  	letter-spacing: -0.15px;
+  	line-height: 20px;
+}
+.container8 {
+  	position: absolute;
+  	top: 24px;
+  	left: 0px;
+  	width: 89.3px;
+  	height: 28px;
+  	font-size: 18px;
+  	color: #101828;
+}
+.pkr-3500 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	letter-spacing: -0.44px;
+  	line-height: 28px;
+  	font-weight: 600;
+  	display: inline-block;
+  	width: 90px;
+}
+.button {
+  	width: 113.1px;
+  	border-radius: 8px;
+  	background-color: #e91e63;
+  	height: 36px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 16px;
+  	box-sizing: border-box;
+  	color: #fff;
+}
+.view-details {
+  	position: relative;
+  	letter-spacing: -0.15px;
+  	line-height: 20px;
+  	font-weight: 500;
+}
+

@@ -94,12 +94,14 @@
 }
 
 .nav-link:hover {
-  color: #E8B4C8;
-  background: rgba(232, 180, 200, 0.1);
+  color: #ef94bb;
+    /* background-image: linear-gradient(to right, #ec4899, #f43f5e); */
+  /* background: rgba(232, 180, 200, 0.1);  */
 }
 
 .nav-link.active {
-  background: #E8B4C8;
+  background-image: linear-gradient(to right, #dc6ca4, #b80825);
+   /* background: #E8B4C8; */
   color: white;
   box-shadow: 0 4px 12px rgba(232, 180, 200, 0.4);
 }

@@ -1,10 +1,13 @@
 /* Final CTA Section Styles */
 .final-cta-section {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #E8B4C8 0%, #D4A4B8 50%, #C294A8 100%);
+  /* background: linear-gradient(135deg, #E8B4C8 0%, #D4A4B8 50%, #C294A8 100%); */
   position: relative;
   overflow: hidden;
   text-align: center;
+  /* color: transparent; */
+  /* background-clip: text; */
+  background-image: linear-gradient(to right, #ec4899, #f43f5e);
 }
 
 .final-cta-section::before {

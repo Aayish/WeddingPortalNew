@@ -1,48 +1,45 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { fetchVenueById } from './venueData'
-import type { Venue } from './venueData'
-import './VenueLandingPage.css'
+import { fetchCatererById } from './api'
+import type { Caterer } from './catererTypes'
+import './styles/caterer.css'
 
-const VenueLandingPage: React.FC = () => {
-  const { venueId = "1" } = useParams<{ venueId: string }>()
+const CatererLandingPage: React.FC = () => {
+  const { catererId = "1" } = useParams<{ catererId: string }>()
   const [activeImageIndex, setActiveImageIndex] = useState(0)
   const [showModal, setShowModal] = useState(false)
   const [modalContent, setModalContent] = useState({ title: '', message: '' })
-  
-  const [venue, setVenue] = useState<Venue | undefined>(undefined)
+
+  const [caterer, setCaterer] = useState<Caterer | undefined>(undefined)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     setIsLoading(true)
-    fetchVenueById(venueId).then((venue) => {
-      setVenue(venue)
+    fetchCatererById(catererId).then((caterer: Caterer | undefined) => {
+      setCaterer(caterer)
       setIsLoading(false)
     })
-  }, [venueId])
-  
-  console.log('Venue ID:', venueId);
-  // console.log('Available Venues:', venues); // TODO: update when venues are available
+  }, [catererId])
 
-  if (isLoading || !venue) {
+  if (isLoading || !caterer) {
     return (
-      <section className="venue-detail-page loading">
-        <div className="venue-info-loading">
+      <section className="caterer-detail-page loading">
+        <div className="caterer-info-loading">
           <div className="loading-spinner"></div>
-          <p>Loading venue details...</p>
+          <p>Loading caterer details...</p>
         </div>
       </section>
     )
   }
 
   const nextImage = () => {
-    if (!venue) return
-    setActiveImageIndex((prev) => (prev + 1) % venue.images.length)
+    if (!caterer) return
+    setActiveImageIndex((prev) => (prev + 1) % caterer.images.length)
   }
 
   const prevImage = () => {
-    if (!venue) return
-    setActiveImageIndex((prev) => (prev - 1 + venue.images.length) % venue.images.length)
+    if (!caterer) return
+    setActiveImageIndex((prev) => (prev - 1 + caterer.images.length) % caterer.images.length)
   }
 
   const goToImage = (index: number) => {
@@ -58,7 +55,7 @@ const VenueLandingPage: React.FC = () => {
     setShowModal(false)
   }
 
-  const handleContactVenue = () => {
+  const handleContactCaterer = () => {
     openModal(
       'Contact Feature Coming Soon!', 
       'We are working hard to bring the direct contact feature to you soon. In the meantime, you can reach out to us through our main contact page.'
@@ -68,49 +65,50 @@ const VenueLandingPage: React.FC = () => {
   const handleSaveToFavorites = () => {
     openModal(
       'Favorites Feature Coming Soon!', 
-      'We are developing a personalized favorites system where you can save and organize your preferred venues. Stay tuned for this exciting feature!'
+      'We are developing a personalized favorites system where you can save and organize your preferred caterers. Stay tuned for this exciting feature!'
     )
   }
 
-  const handleScheduleTour = () => {
+  const handleScheduleTasting = () => {
     openModal(
-      'Tour Booking Coming Soon!', 
-      'Our online tour scheduling system is under development. Soon you will be able to book venue tours directly through our website. We appreciate your patience!'
+      'Tasting Booking Coming Soon!', 
+      'Our online tasting scheduling system is under development. Soon you will be able to book tastings directly through our website. We appreciate your patience!'
     )
   }
 
+  // Example amenities for caterers
   const amenitiesData = [
-    { icon: "🚗", name: "Parking Available", included: true },
-    { icon: "❄️", name: "Air Conditioning", included: true },
-    { icon: "🔑", name: "Valet Parking", included: true },
-    { icon: "📸", name: "Photography Allowed", included: true },
-    { icon: "🍽️", name: "External Catering", included: false },
-    { icon: "🎨", name: "External Decor", included: true },
-    { icon: "👰", name: "Bridal Suite", included: true },
-    { icon: "💃", name: "Dance Floor", included: true },
-    { icon: "🎭", name: "Stage Available", included: true },
-    { icon: "💡", name: "Professional Lighting", included: true },
-    { icon: "🔊", name: "Sound System", included: true },
-    { icon: "🛡️", name: "24/7 Security", included: true },
+    { icon: "🍽️", name: "Multi-cuisine Menu", included: true },
+    { icon: "🥗", name: "Vegetarian Options", included: true },
+    { icon: "🍰", name: "Custom Desserts", included: true },
+    { icon: "🚚", name: "On-site Catering", included: true },
+    { icon: "🎉", name: "Event Staff", included: true },
+    { icon: "🍾", name: "Beverage Service", included: true },
+    { icon: "🧑‍🍳", name: "Live Cooking Stations", included: false },
+    { icon: "📦", name: "Takeaway Service", included: true },
+    { icon: "🌶️", name: "Spicy Food Options", included: true },
+    { icon: "🥤", name: "Soft Drinks Included", included: true },
+    { icon: "🧁", name: "Dessert Bar", included: true },
+    { icon: "🛡️", name: "Food Safety Certified", included: true },
   ]
 
   return (
-    <div className="venue-detail-page">
+    <div className="caterer-detail-page">
       {/* Section 1: Hero Image Gallery */}
-      <section className="venue-hero-gallery">
+      <section className="caterer-hero-gallery">
         <div className="gallery-container">
           {/* Main Image */}
           <div className="main-image-container">
             <img 
-              src={venue.images[activeImageIndex]?.url} 
-              alt={venue.images[activeImageIndex]?.alt}
-              className="main-venue-image"
+              src={caterer.images[activeImageIndex]?.url} 
+              alt={caterer.images[activeImageIndex]?.alt}
+              className="main-caterer-image"
             />
             
             {/* Rating Badge */}
             <div className="rating-badge">
               <span className="rating-star">⭐</span>
-              <span className="rating-value">{venue.rating}</span>
+              <span className="rating-value">{caterer.rating}</span>
             </div>
             
             {/* Navigation Arrows */}
@@ -124,7 +122,7 @@ const VenueLandingPage: React.FC = () => {
           
           {/* Thumbnail Gallery */}
           <div className="thumbnail-gallery">
-            {venue.images.map((image: Venue['images'][0], index: number) => (
+            {caterer.images.map((image: Caterer['images'][0], index: number) => (
               <div 
                 key={image.id}
                 className={`thumbnail ${index === activeImageIndex ? 'active' : ''}`}
@@ -143,35 +141,35 @@ const VenueLandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 2: Venue Details & Amenities */}
-      <section className="venue-details-section">
+      {/* Section 2: Caterer Details & Amenities */}
+      <section className="caterer-details-section">
         <div className="details-container">
-          <div className="venue-info-left">
-            <h1 className="venue-title">{venue.name}</h1>
+          <div className="caterer-info-left">
+            <h1 className="caterer-title">{caterer.name}</h1>
             
-            <div className="venue-location">
+            <div className="caterer-location">
               <span className="location-icon">📍</span>
-              <span>{venue.location}</span>
+              <span>{caterer.location}</span>
             </div>
             
-            <div className="venue-capacity">
+            <div className="caterer-capacity">
               <span className="capacity-icon">👥</span>
-              <span>{venue.capacity.min}-{venue.capacity.max} guests</span>
+              <span>{caterer.capacity.min}-{caterer.capacity.max} guests</span>
             </div>
             
-            <div className="venue-pricing">
+            <div className="caterer-pricing">
               <span className="pricing-label">Starting from</span>
-              <span className="pricing-amount">From PKR {venue.price.starting.toLocaleString()}</span>
+              <span className="pricing-amount">From PKR {caterer.price.starting.toLocaleString()}</span>
             </div>
             
-            <div className="venue-about">
-              <h3>About This Venue</h3>
-              <p>{venue.description}</p>
+            <div className="caterer-about">
+              <h3>About This Caterer</h3>
+              <p>{caterer.description}</p>
             </div>
           </div>
           
-          <div className="venue-amenities-right">
-            <h2 className="amenities-title">Venue Amenities & Features</h2>
+          <div className="caterer-amenities-right">
+            <h2 className="amenities-title">Caterer Amenities & Features</h2>
             <div className="amenities-grid">
               {amenitiesData.map((amenity, index) => (
                 <div 
@@ -196,26 +194,26 @@ const VenueLandingPage: React.FC = () => {
       </section>
 
       {/* Section 3: Call-to-Action */}
-      <section className="venue-cta-section">
+      <section className="caterer-cta-section">
         <div className="cta-container">
-          <h2 className="cta-title">Ready to Book Your Dream Venue?</h2>
+          <h2 className="cta-title">Ready to Book Your Dream Caterer?</h2>
           <p className="cta-description">
-            Contact us today to check availability, schedule a tour, and get a personalized 
-            quote for your special day. Our team is here to make your wedding dreams come true.
+            Contact us today to check availability, schedule a tasting, and get a personalized 
+            quote for your special day. Our team is here to make your wedding delicious and memorable.
           </p>
           
           <div className="cta-buttons">
-            <button className="cta-btn primary" onClick={handleContactVenue}>
+            <button className="cta-btn primary" onClick={handleContactCaterer}>
               <span className="btn-icon">💝</span>
-              Contact Venue
+              Contact Caterer
             </button>
             <button className="cta-btn secondary" onClick={handleSaveToFavorites}>
               <span className="btn-icon">⭐</span>
               Save to Favorites
             </button>
-            <button className="cta-btn secondary" onClick={handleScheduleTour}>
-              <span className="btn-icon">📅</span>
-              Schedule Tour
+            <button className="cta-btn secondary" onClick={handleScheduleTasting}>
+              <span className="btn-icon">🍽️</span>
+              Schedule Tasting
             </button>
           </div>
         </div>
@@ -244,4 +242,4 @@ const VenueLandingPage: React.FC = () => {
   )
 }
 
-export default VenueLandingPage
+export default CatererLandingPage

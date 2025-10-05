@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-import { mockVenues } from './venueData'
+import { fetchFeaturedVenues } from './venueData'
+import type { Venue } from './venueData'
 import VenueItemCard from './components/VenueItemCard.tsx'
 import './VenueListingPage.css'
 import { useNavigate } from 'react-router-dom'
@@ -46,7 +47,11 @@ const VenueListingPage: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
   
-  const venues = Object.values(mockVenues)
+  const [venues, setVenues] = useState<Venue[]>([])
+
+  useEffect(() => {
+    fetchFeaturedVenues().then(setVenues)
+  }, [])
   const popularSearches = ['Wedding Halls', 'Garden Venues', 'Luxury Hotels', 'Banquet Halls']
   
   const cities = ['Lahore', 'Islamabad', 'Karachi', 'Peshawar', 'Multan']
@@ -82,8 +87,8 @@ const VenueListingPage: React.FC = () => {
     }
     
     if (searchParams.venueType) {
-      filteredVenues = filteredVenues.filter(venue => 
-        venue.features.some(feature => 
+      filteredVenues = filteredVenues.filter((venue: Venue) => 
+        venue.features.some((feature: string) => 
           feature.toLowerCase().includes(searchParams.venueType.toLowerCase())
         ) ||
         venue.name.toLowerCase().includes(searchParams.venueType.toLowerCase())

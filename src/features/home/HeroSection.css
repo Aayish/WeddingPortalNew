@@ -1,9 +1,11 @@
 /* Hero Section Styles */
 .hero-section {
-  position: relative;
-  height: 100vh;
-  min-height: 600px;
   display: flex;
+  position: relative;
+  /* height: 100vh; */
+  /* min-height: 600px; */
+  display: flex;
+    margin-top: 80px; /* Offset for fixed navigation bar */
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -24,13 +26,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, 
+  /* background: linear-gradient(135deg, 
     rgba(255, 223, 186, 0.3) 0%, 
     rgba(232, 193, 217, 0.4) 50%, 
     rgba(200, 170, 140, 0.3) 100%
   ),
   url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="leaves" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="30" fill="%23FFD89C" opacity="0.1"/><circle cx="150" cy="100" r="25" fill="%23E8B4C8" opacity="0.1"/><circle cx="100" cy="150" r="35" fill="%23B49678" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23leaves)"/></svg>');
-  background-size: cover;
+  background-size: cover; */
   background-position: center;
   background-attachment: fixed;
 }
@@ -120,8 +122,9 @@
 
 /* Hero Section with Cards */
 .hero-section {
-  padding: 50px 20px;
-  background: #f8f9fa;
+  /* padding-top: 0; */
+  /* padding-bottom: 0; */
+  /* background: #f8f9fa; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,6 +136,7 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 1200px;
+  margin: 40px 0; /* Add top and bottom margin for spacing */
 }
 
 .hero-card {
@@ -186,28 +190,19 @@
 
 /* Hero Background Section */
 .hero-background-section {
-  background: linear-gradient(135deg, #E8B4C8 0%, #D4A4B8 50%, #C294A8 100%);
+  /* background: linear-gradient(to right, #ec4899, #f43f5e); /* Equivalent to Tailwind's from-pink-500 to-rose-500 */
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 6rem 0; /* Match Final CTA section padding */
-}
-
-.hero-background-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="hearts" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M50,25 C50,15 40,10 30,15 C20,10 10,15 10,25 C10,35 30,50 30,50 C30,50 50,35 50,25 Z" fill="%23FFFFFF" opacity="0.05"/></pattern></defs><rect width="100%" height="100%" fill="url(%23hearts)"/></svg>');
-  pointer-events: none;
+  /* padding-top: 0; */
+  /* padding-bottom: 0; */
 }
 
 .hero-background-overlay {
   background: rgba(255, 255, 255, 0.8);
   width: 100%;
-  padding: 40px;
+  /* padding-top: 0; */
+  /* padding-bottom: 0; */
   text-align: center;
   color: white;
 }
@@ -224,7 +219,7 @@
 /* Restore Hero Text Section Styling */
 .hero-text-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 40px auto 0 auto; /* Increased top margin for better spacing */
   text-align: center;
   padding: 40px 20px; /* Add padding for better spacing */
 }
@@ -234,51 +229,32 @@
   background: none;
 }
 
-.hero-background-section {
+/* .hero-background-section {
   background: linear-gradient(135deg, #E8B4C8 0%, #D4A4B8 50%, #C294A8 100%);
-}
+} */
 
 .hero-text-content {
   background: none;
 }
 
 /* Update Font Color for Hero Text */
+/* Merged .hero-main-heading styles */
 .hero-main-heading {
-  color: black; /* Change font color to black for readability */
   font-family: 'Playfair Display', serif; /* Royal and elegant font */
   font-size: 3rem; /* Adjust font size to fit in one line */
   font-weight: 700; /* Bold for prominence */
   white-space: nowrap; /* Prevent text wrapping */
-}
-
-.hero-subheading {
-  color: black; /* Change font color to black for readability */
-  font-family: 'Playfair Display', serif; /* Royal and elegant font */
-  font-size: 1.5rem; /* Increase font size */
-  font-weight: 500; /* Medium weight for readability */
-}
-
-/* Updated Hero Section Colors and Fonts */
-.hero-section {
-  font-family: 'Playfair Display', serif;
-  color: #2d3748;
-}
-
-.hero-background {
-  background: linear-gradient(135deg, 
-    rgba(255, 223, 186, 0.3) 0%, 
-    rgba(232, 193, 217, 0.4) 50%, 
-    rgba(200, 170, 140, 0.3) 100%
-  );
-}
-
-.hero-main-heading {
-  font-size: 3rem;
-  color: #4a5568;
+  color: #000; /* Solid black color for readability */
+  
+  background-clip: text;
 }
 
 .hero-highlight {
-  color: #ff6b35;
+  /* color: #ff6b35; */
+    color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right, #e84f9b, #eb0a2f);
+
 }
 
 .hero-subheading {

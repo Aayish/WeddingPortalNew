@@ -9,7 +9,7 @@ interface NavigationProps {
 const navigationItems = [
   { id: 'home', label: 'Home', path: '/' },
   { id: 'venues', label: 'Venues', path: '/venues' },
-  { id: 'caterers', label: 'Caterers', path: '#caterers' }, // Keep as anchor for now
+  { id: 'caterers', label: 'Caterers', path: '/caterers' },
   { id: 'photographers', label: 'Photographers', path: '#photographers' }, // Keep as anchor for now
   { id: 'bridal-makeup', label: 'Bridal Makeup', path: '#bridal-makeup' }, // Keep as anchor for now
   { id: 'bridal-dresses', label: 'Bridal Dresses', path: '#bridal-dresses' }, // Keep as anchor for now

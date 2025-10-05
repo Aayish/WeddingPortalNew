@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { mockVenues, type Venue } from './venueData'
+import type { Venue } from './venueData'
+import { fetchFeaturedVenues } from './venueData'
 import CTAButton from '../common/CTAButton'
 import './VenueHeroSection.css'
 
@@ -11,29 +12,30 @@ interface VenueHeroSectionProps {
 }
 
 const VenueHeroSection: React.FC<VenueHeroSectionProps> = ({ 
-  venueId, 
-  activeImageIndex, 
-  setActiveImageIndex 
+  venueId,
+  activeImageIndex,
+  setActiveImageIndex
 }) => {
   const navigate = useNavigate()
-  const venue: Venue | undefined = mockVenues[venueId]
+  const [venue, setVenue] = useState<Venue | undefined>(undefined)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => setIsLoading(false), 1000)
-    return () => clearTimeout(timer)
+    setIsLoading(true)
+    fetchFeaturedVenues().then((venues) => {
+      const found = venues.find(v => v.id === venueId)
+      setVenue(found)
+      setIsLoading(false)
+    })
   }, [venueId])
 
   useEffect(() => {
     if (!venue?.images.length) return
-
     const timer = setInterval(() => {
       setActiveImageIndex((activeImageIndex + 1) % venue.images.length)
     }, 5000)
-
     return () => clearInterval(timer)
-  }, [activeImageIndex, venue?.images.length, setActiveImageIndex])
+  }, [activeImageIndex, venue?.images.length, setActiveImageIndex, venue])
 
   if (isLoading || !venue) {
     return (

@@ -1,5 +1,5 @@
 import './HeroSection.css'
-import HowItWorksSection from './HowItWorksSection'
+// import HowItWorksSection from './HowItWorksSection'
 
 const HeroSection = () => {
   const cardData = [
@@ -28,17 +28,15 @@ const HeroSection = () => {
       <section className="hero-section">
         {/* Hero Section with Background and Text */}
         <div className="hero-background-section">
-          <div className="hero-background-overlay">
-            <div className="hero-text-content">
-              <h1 className="hero-main-heading">
-                Plan Your Wedding, <span className="hero-highlight">Stress-Free</span>
-              </h1>
-              <p className="hero-subheading">
-                Whether you're with the bride, the groom, or just exploring —
-                <br />
-                we'll guide you every step of the way to your <span className="hero-highlight">perfect Pakistani wedding</span>.
-              </p>
-            </div>
+          <div className="hero-text-content">
+            <h1 className="hero-main-heading">
+              Plan Your Wedding, <span className="hero-highlight">Stress-Free</span>
+            </h1>
+            <p className="hero-subheading">
+              Whether you're with the bride, the groom, or just exploring —
+              <br />
+              we'll guide you every step of the way to your <span className="hero-highlight">perfect Pakistani wedding</span>.
+            </p>
           </div>
         </div>
         <div className="hero-cards-container">
@@ -52,7 +50,7 @@ const HeroSection = () => {
           ))}
         </div>
       </section>
-      <HowItWorksSection />
+      {/* <HowItWorksSection /> */}
     </div>
   )
 }
