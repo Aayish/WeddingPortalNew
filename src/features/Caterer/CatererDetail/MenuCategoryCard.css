@@ -1,0 +1,39 @@
+.menu-category-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 24px 18px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.menu-category-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #e91e63;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.menu-category-icon {
+  font-size: 1.2rem;
+}
+.menu-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-category-item {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.menu-category-dot {
+  color: #e91e63;
+  font-size: 1.2rem;
+}

@@ -22,27 +22,27 @@ export const Test2: React.FC<{ caterer: Caterer }> = ({ caterer }) => {
                     <div className="royal-feast-catering">{caterer?.name || 'Royal Feast Catering'}</div>
                 </div>
                 <div className="container3">
-                    <img className="caterercard-icon" alt="" src ='../../../src/assets/location.svg' />
+                    <img className="caterecard-icon" alt="" src ='../../../src/assets/location.svg' />
                     <div className="karachi-sindh">{caterer?.location || 'Karachi, Sindh'}</div>
                 </div>
-                <div className="container4">../../../src/assets/person.svg
-                    <img className="caterercard-icon" alt="" src ='' />
+                <div className="container4">
+                    <img className="caterecard-icon" alt="" src ='../../../src/assets/person.svg' />
                     <div className="karachi-sindh">{caterer?.capacity ? `${caterer.capacity.min}-${caterer.capacity.max} guests` : '100-500 guests'}</div>
                 </div>
                 <div className="container5">
                     <div className="caterercard-badge">
-                        <div className="sponsored">{caterer?.amenities?.[0] || 'Outdoor Catering'}</div>
+                        <div className="outdoor-catering">{caterer?.amenities?.[0] || 'Outdoor Catering'}</div>
                     </div>
                     <div className="badge2">
-                        <div className="sponsored">{caterer?.amenities?.[1] || 'Halal Guarantee'}</div>
+                        <div className="outdoor-catering">{caterer?.amenities?.[1] || 'Halal Guarantee'}</div>
                     </div>
                     <div className="badge3">
-                        <div className="sponsored">{caterer?.amenities?.[2] || 'Live Cooking'}</div>
+                        <div className="outdoor-catering">{caterer?.amenities?.[2] || 'Live Cooking'}</div>
                     </div>
                 </div>
                 <div className="container6">
                     <div className="container7">
-                        <div className="caterercard-text">
+                        <div className="text">
                             <div className="starting-from">Starting from</div>
                         </div>
                         <div className="container8">

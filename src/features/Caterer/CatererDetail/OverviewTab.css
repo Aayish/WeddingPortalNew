@@ -1,0 +1,5 @@
+.overview-tab-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}

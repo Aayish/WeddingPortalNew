@@ -1,15 +1,17 @@
-
-import type { Caterer } from './catererTypes';
-import CatererItemCardImage from './CatererItemCardImage';
-import CatererItemCardBody from './CatererItemCardBody';
-import CatererItemCardFooter from './CatererItemCardFooter';
+import type { Caterer } from "./catererTypes";
+import CatererItemCardImage from "./CatererItemCardImage";
+import CatererItemCardBody from "./CatererItemCardBody";
+import CatererItemCardFooter from "./CatererItemCardFooter";
 
 interface CatererItemCardProps {
   caterer: Caterer;
   image: string;
 }
 
-const CatererItemCard: React.FC<CatererItemCardProps> = ({ caterer, image }) => {
+const CatererItemCard: React.FC<CatererItemCardProps> = ({
+  caterer,
+  image,
+}) => {
   return (
     <div className="caterer-card-modern caterer-grid-item">
       <CatererItemCardImage
@@ -26,7 +28,7 @@ const CatererItemCard: React.FC<CatererItemCardProps> = ({ caterer, image }) => 
       />
       <CatererItemCardFooter
         price={caterer.price.starting}
-        onViewDetails={() => alert('Coming soon')}
+        onViewDetails={() => alert("Coming soon")}
       />
     </div>
   );

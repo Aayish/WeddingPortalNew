@@ -1,0 +1,89 @@
+.overview-left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.overview-about-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.overview-about-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.overview-about-desc {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+.overview-specialties h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.overview-specialty-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.specialty-badge {
+  background: #ffe0ef;
+  color: #e91e63;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 16px;
+}
+.overview-services h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.overview-services-list {
+  display: flex;
+  gap: 32px;
+}
+.overview-services-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.service-item {
+  color: #e91e63;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.overview-quick-stats-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.overview-quick-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 12px;
+}
+.quick-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quick-stat-icon {
+  font-size: 2rem;
+  color: #e91e63;
+}
+.quick-stat-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.quick-stat-label {
+  font-size: 0.95rem;
+  color: #888;
+}

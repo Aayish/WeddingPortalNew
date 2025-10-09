@@ -1,0 +1,71 @@
+.overview-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.overview-price-box,
+.overview-contact-box,
+.overview-hours-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.overview-price-box h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.overview-price-main {
+  background: #ffe0ef;
+  color: #e91e63;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 10px 0 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.overview-price-currency {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.overview-price-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.overview-price-note {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+.overview-price-meta {
+  font-size: 0.98rem;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.overview-contact-box h3,
+.overview-hours-box h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.overview-contact-item {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.overview-hours-list {
+  font-size: 1rem;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

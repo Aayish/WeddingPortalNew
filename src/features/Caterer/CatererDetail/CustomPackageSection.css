@@ -1,0 +1,30 @@
+.custom-package-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.custom-package-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.custom-package-btn {
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.custom-package-btn:hover {
+  background: #ad1457;
+}

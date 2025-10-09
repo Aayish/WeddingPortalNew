@@ -15,7 +15,13 @@
   margin-right: auto;
   width: 100%;
 }
-
+.price-accent1 {
+  width: 4px;
+  height: 50px;
+  background: linear-gradient(135deg, #ff6b9d, #e91e63);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
 @media (max-width: 900px) {
   .caterer-grid--3col {
     grid-template-columns: 1fr;
@@ -36,10 +42,14 @@
 }
 
 .caterer_landing-hero::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,0 Q50,25 100,0 L100,100 Q50,75 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>') no-repeat center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,0 Q50,25 100,0 L100,100 Q50,75 0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>')
+    no-repeat center;
   background-size: cover;
   z-index: 1;
 }
@@ -60,7 +70,7 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 0;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   line-height: 1.2;
   text-align: center;
   width: 100%;
@@ -98,14 +108,14 @@
   background: white;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
 }
 .caterer_card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 .caterer_card__image {
   width: 100%;
